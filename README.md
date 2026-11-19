@@ -17,15 +17,15 @@ Desenvolver um sistema que auxilie no gerenciamento das informações de um supe
 O sistema conta com cinco entidades principais:
 
 - **Produtos:** cadastro e gerenciamento dos produtos disponíveis no supermercado.
-  ![Tela de Produtos](images/img.png)
+  ![Tela de Produtos](src/images/img.png)
 - **Funcionários:** armazenamento de informações dos colaboradores.
-  ![Tela de Funcionarios](images/img_1.png)
+  ![Tela de Funcionarios](src/images/img_1.png)
 - **Fornecedores:** gerenciamento dos dados dos fornecedores.
-  ![Tela de Fornecedores](images/img_2.png)
+  ![Tela de Fornecedores](src/images/img_2.png)
 - **Clientes:** armazenamento das informações dos clientes.
-  ![Tela de Clientes](images/img_3.png)
+  ![Tela de Clientes](src/images/img_3.png)
 - **Categorias:** organização e classificação dos produtos.
-  ![Tela de Categorias](images/img_4.png)
+  ![Tela de Categorias](src/images/img_4.png)
 
 
 As operações disponíveis na API incluem:
