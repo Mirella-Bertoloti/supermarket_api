@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bloom Market — Painel de Controle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="brand">Bloom Market<span>PAINEL ADMINISTRATIVO</span></div>
+        <div class="nav-title">MENU PRINCIPAL</div>
+        <nav id="navigation">
+            <button class="nav-item active" data-section="produtos">▦ <span>Produtos</span></button>
+            <button class="nav-item" data-section="funcionarios">♙ <span>Funcionários</span></button>
+            <button class="nav-item" data-section="fornecedores">♧ <span>Fornecedores</span></button>
+            <button class="nav-item" data-section="clientes">♡ <span>Clientes</span></button>
+            <button class="nav-item" data-section="categorias">◇ <span>Categorias</span></button>
+        </nav>
+        <div class="side-note">Organize as informações do Bloom Market em um só lugar. Cadastre, consulte, edite e exclua os registros.</div>
+    </aside>
+
+    <main>
+        <header class="topline">
+            <div class="welcome">
+                <small>PAINEL DE CONTROLE</small>
+                <h1 id="welcomeTitle">Olá! Bem-vinda ao Bloom Market.</h1>
+                <p id="welcomeText">Gerencie e consulte os produtos cadastrados no mercado.</p>
+            </div>
+            <button id="newBtn" class="primary">＋ CADASTRAR PRODUTO</button>
+        </header>
+
+        <section class="stats">
+            <article class="stat"><span id="statLabel1">Produtos cadastrados</span><strong id="stat1">—</strong></article>
+            <article class="stat"><span id="statLabel2">Categorias disponíveis</span><strong id="stat2">—</strong></article>
+            <article class="stat"><span id="statLabel3">Unidades em estoque</span><strong id="stat3">—</strong></article>
+        </section>
+
+        <section class="panel">
+            <div class="section-head">
+                <div><h2 id="sectionTitle">Catálogo de produtos</h2><p id="sectionDescription">Visualize os itens registrados e pesquise pelo nome.</p></div>
+                <div class="tools">
+                    <input id="search" class="search" type="search" placeholder="Buscar registro...">
+                    <select id="filter" class="filter"><option value="">Todos</option></select>
+                </div>
+            </div>
+            <div id="records" class="record-grid">
+                <div class="empty"><strong>CARREGANDO...</strong>Consultando a API.</div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<div class="backdrop" id="backdrop">
+    <div class="modal">
+        <div class="modal-head"><h2 id="modalTitle">Novo cadastro</h2><button class="close" id="closeBtn" aria-label="Fechar">×</button></div>
+        <form id="recordForm">
+            <div id="formFields" class="form-grid"></div>
+            <div class="form-actions">
+                <button type="button" class="ghost" id="cancelBtn">CANCELAR</button>
+                <button type="submit" class="primary" id="saveBtn">SALVAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
