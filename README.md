@@ -92,11 +92,10 @@ supermarket/
 │   │       │   ├── css/
 │   │       │   │   └── style.css
 │   │       │   │
-│   │       │   └── js/
-│   │       │       └── script.js
-│   │       │
-│   │       ├── templates/
-│   │       │   └── index.html
+│   │       │   ├── js/
+│   │       │   |   └── script.js
+│   │       │   |
+│   │       |   └── index.html
 │   │       │
 │   │       └── application.properties
 │   │
