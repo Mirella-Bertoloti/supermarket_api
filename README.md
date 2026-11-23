@@ -52,67 +52,68 @@ As operações disponíveis na API incluem:
 ### Banco de dados
 - MySQL Workbench
 
-supermarket_api/
+
+## Estrutura de Pastas
+
+```text
+supermarket/
 │
 ├── src/
-│   │
-│   ├── images/
-|   |   ├── img.png
-|   |   ├── img_1.png
-|   |   ├── img_2.png
-|   |   ├── img_3.png
-|   |   └── img_4.png
-│   │
+|   ├── images/
+|   |
 │   ├── main/
-│   │   │
 │   │   ├── java/com/dt2/supermarket/
-│   │   │    ├── controller/
-│   │   │    │   ├── CategoriaController.java
-│   │   │    │   ├── ClienteController.java
-│   │   │    │   ├── FornecedorController.java
-│   │   │    │   ├── FuncionarioController.java
-│   │   │    │   └── ProdutoController.java
-│   │   │    │
-│   │   │    ├── entities/
-│   │   │    │   ├── Categoria.java
-│   │   │    │   ├── Cliente.java
-│   │   │    │   ├── Fornecedor.java
-│   │   │    │   ├── Funcionario.java
-│   │   │    │   └── Produto.java
-│   │   │    │
-│   │   │    ├── repository/
-│   │   │    │   ├── CategoriaRepository.java
-│   │   │    │   ├── ClienteRepository.java
-│   │   │    │   ├── FornecedorRepository.java
-│   │   │    │   ├── FuncionarioRepository.java
-│   │   │    │   └── ProdutoRepository.java
-│   │   │    │
-│   │   │    └── SupermarketApplication.java
+│   │   │   │
+│   │   │   ├── controller/
+│   │   │   │   ├── CategoriaController.java
+│   │   │   │   ├── ClienteController.java
+│   │   │   │   ├── FornecedorController.java
+│   │   │   │   ├── FuncionarioController.java
+│   │   │   │   └── ProdutoController.java
+│   │   │   │
+│   │   │   ├── entities/
+│   │   │   │   ├── Categoria.java
+│   │   │   │   ├── Cliente.java
+│   │   │   │   ├── Fornecedor.java
+│   │   │   │   ├── Funcionario.java
+│   │   │   │   └── Produto.java
+│   │   │   │
+│   │   │   ├── repository/
+│   │   │   │   ├── CategoriaRepository.java
+│   │   │   │   ├── ClienteRepository.java
+│   │   │   │   ├── FornecedorRepository.java
+│   │   │   │   ├── FuncionarioRepository.java
+│   │   │   │   └── ProdutoRepository.java
+│   │   │   │
+│   │   │   └── SupermarketApplication.java
 │   │   │
 │   │   └── resources/
 │   │       ├── static/
-|   |       |   ├── css/
-|   |       |   |   └── style.css
-|   |       |   | 
-|   |       |   ├── js/
-|   |       |   |   └── script.js
-|   |       |   |
-|   |       |   └── index.html
-|   |       |
-|   |       └── application.properties
+│   │       │   ├── css/
+│   │       │   │   └── style.css
+│   │       │   │
+│   │       │   └── js/
+│   │       │       └── script.js
+│   │       │
+│   │       ├── templates/
+│   │       │   └── index.html
+│   │       │
+│   │       └── application.properties
 │   │
-│   └── test/java/com/dt2/supermarket/
-│       └── SupermarketApplicationTest.java
+│   └── test/
+│       └── java/com/dt2/supermarket/
+│           └── SupermarketApplicationTest.java
 │
 ├── .mvn/wrapper
-|    └── maven-wrapper.properties
-|
+│   └── maven-wrapper.properties
+│
 ├── mvnw
-├── .gitattributes
-├── .gitignore
 ├── mvnw.cmd
 ├── pom.xml
+├── .gitattributes
+├── .gitignore
 └── README.md
+```
 
 
 ## Endpoints da API
