@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
 public class Funcionario {
@@ -11,10 +14,15 @@ public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank
     private String nome;
+    @CPF
     private String cpf;
+    @NotBlank
     private String cargo;
+    @NotBlank
     private String telefone;
+    @NotNull
     private double salario;
 
     public Funcionario(int id, String nome, String cpf, String cargo, String telefone, double salario) {
