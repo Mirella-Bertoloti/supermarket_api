@@ -53,6 +53,68 @@ As operações disponíveis na API incluem:
 - MySQL Workbench
 
 
+## Estrutura de Pastas
+
+```text
+supermarket/
+│
+├── src/
+|   ├── images/
+|   |
+│   ├── main/
+│   │   ├── java/com/dt2/supermarket/
+│   │   │   │
+│   │   │   ├── controller/
+│   │   │   │   ├── CategoriaController.java
+│   │   │   │   ├── ClienteController.java
+│   │   │   │   ├── FornecedorController.java
+│   │   │   │   ├── FuncionarioController.java
+│   │   │   │   └── ProdutoController.java
+│   │   │   │
+│   │   │   ├── entities/
+│   │   │   │   ├── Categoria.java
+│   │   │   │   ├── Cliente.java
+│   │   │   │   ├── Fornecedor.java
+│   │   │   │   ├── Funcionario.java
+│   │   │   │   └── Produto.java
+│   │   │   │
+│   │   │   ├── repository/
+│   │   │   │   ├── CategoriaRepository.java
+│   │   │   │   ├── ClienteRepository.java
+│   │   │   │   ├── FornecedorRepository.java
+│   │   │   │   ├── FuncionarioRepository.java
+│   │   │   │   └── ProdutoRepository.java
+│   │   │   │
+│   │   │   └── SupermarketApplication.java
+│   │   │
+│   │   └── resources/
+│   │       ├── static/
+│   │       │   ├── css/
+│   │       │   │   └── style.css
+│   │       │   │
+│   │       │   ├── js/
+│   │       │   |   └── script.js
+│   │       │   |
+│   │       |   └── index.html
+│   │       │
+│   │       └── application.properties
+│   │
+│   └── test/
+│       └── java/com/dt2/supermarket/
+│           └── SupermarketApplicationTest.java
+│
+├── .mvn/wrapper
+│   └── maven-wrapper.properties
+│
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── .gitattributes
+├── .gitignore
+└── README.md
+```
+
+
 ## Endpoints da API
 
 A API utiliza os seguintes caminhos:
@@ -66,6 +128,138 @@ A API utiliza os seguintes caminhos:
 | Categorias | `/api/categorias` |
 
 Cada entidade possui operações de cadastro, consulta, atualização e exclusão.
+
+## Endpoints e métodos HTTP
+
+A API REST do Bloom Market utiliza os métodos HTTP para realizar operações de gerenciamento de dados, seguindo o padrão CRUD (Create, Read, Update e Delete).
+
+Cada entidade possui endpoints específicos para realizar operações de cadastro, consulta, atualização e exclusão.
+
+### Métodos HTTP utilizados
+
+| Método | Operação | Descrição |
+|---|---|---|
+| GET | Read | Consulta e retorna os registros cadastrados. |
+| POST | Create | Cadastra um novo registro no sistema. |
+| PUT | Update | Atualiza as informações de um registro existente. |
+| DELETE | Delete | Exclui um registro utilizando seu identificador (ID). |
+
+### Endpoints por entidade
+
+A API possui cinco entidades principais: Produtos, Funcionários, Fornecedores, Clientes e Categorias.
+
+#### 1. Produtos
+
+Endpoint base: `/api/produtos`
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/api/produtos` | Lista todos os produtos cadastrados. |
+| GET | `/api/produtos/{id}` | Busca um produto específico pelo ID. |
+| POST | `/api/produtos` | Cadastra um novo produto. |
+| PUT | `/api/produtos/{id}` | Atualiza os dados de um produto existente. |
+| DELETE | `/api/produtos/{id}` | Exclui um produto pelo ID. |
+
+#### 2. Funcionários
+
+Endpoint base: `/api/funcionarios`
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/api/funcionarios` | Lista todos os funcionários. |
+| GET | `/api/funcionarios/{id}` | Busca um funcionário pelo ID. |
+| POST | `/api/funcionarios` | Cadastra um novo funcionário. |
+| PUT | `/api/funcionarios/{id}` | Atualiza os dados de um funcionário. |
+| DELETE | `/api/funcionarios/{id}` | Exclui um funcionário. |
+
+#### 3. Fornecedores
+
+Endpoint base: `/api/fornecedores`
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/api/fornecedores` | Lista todos os fornecedores. |
+| GET | `/api/fornecedores/{id}` | Busca um fornecedor pelo ID. |
+| POST | `/api/fornecedores` | Cadastra um novo fornecedor. |
+| PUT | `/api/fornecedores/{id}` | Atualiza os dados de um fornecedor. |
+| DELETE | `/api/fornecedores/{id}` | Exclui um fornecedor. |
+
+#### 4. Clientes
+
+Endpoint base: `/api/clientes`
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/api/clientes` | Lista todos os clientes. |
+| GET | `/api/clientes/{id}` | Busca um cliente pelo ID. |
+| POST | `/api/clientes` | Cadastra um novo cliente. |
+| PUT | `/api/clientes/{id}` | Atualiza os dados de um cliente. |
+| DELETE | `/api/clientes/{id}` | Exclui um cliente. |
+
+#### 5. Categorias
+
+Endpoint base: `/api/categorias`
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/api/categorias` | Lista todas as categorias. |
+| GET | `/api/categorias/{id}` | Busca uma categoria pelo ID. |
+| POST | `/api/categorias` | Cadastra uma nova categoria. |
+| PUT | `/api/categorias/{id}` | Atualiza uma categoria existente. |
+| DELETE | `/api/categorias/{id}` | Exclui uma categoria. |
+
+### Exemplos de utilização
+
+Considerando que a API esteja sendo executada localmente na porta 8080:
+
+**Cadastrar um produto (POST)**
+
+`POST http://localhost:8080/api/produtos`
+
+Exemplo de corpo da requisição (JSON):
+
+```json
+{
+  "nome": "Arroz",
+  "preco": 25.90
+}
+```
+
+*Os campos são ilustrativos e devem ser ajustados aos atributos definidos na entidade Produto.*
+
+**Listar produtos (GET)**
+
+`GET http://localhost:8080/api/produtos`
+
+Retorna a lista de produtos cadastrados.
+
+**Buscar produto por ID (GET)**
+
+`GET http://localhost:8080/api/produtos/1`
+
+Retorna os dados do produto que possui o identificador 1.
+
+**Atualizar produto (PUT)**
+
+`PUT http://localhost:8080/api/produtos/1`
+
+Permite modificar as informações do produto selecionado.
+
+**Excluir produto (DELETE)**
+
+`DELETE http://localhost:8080/api/produtos/1`
+
+Remove o produto correspondente ao identificador informado.
+
+### Operações CRUD
+
+As operações CRUD permitem que o sistema realize o gerenciamento completo das informações armazenadas no banco de dados:
+
+- Create: criação de novos registros por meio do método POST.
+- Read: leitura e consulta de registros por meio do método GET.
+- Update: atualização de registros por meio do método PUT.
+- Delete: exclusão de registros por meio do método DELETE.
+
 
 ## Como executar o projeto
 
